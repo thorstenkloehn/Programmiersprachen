@@ -7,6 +7,8 @@ Programmiersprachen
 ===================
 
 .. toctree::
-
    Installieren.md
+   Datenschutzerklawrung.md
+   Impressum.md
+
 
