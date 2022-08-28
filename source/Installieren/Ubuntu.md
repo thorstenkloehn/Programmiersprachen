@@ -1,13 +1,4 @@
-# Wsl Installieren
-
-```
-wsl --install
-wsl --list --online
-wsl --install -d <DistroName>
-
-```
-
-## Ubuntu Installieren
+# Ubuntu
 
 ```
 sudo apt-get update
@@ -31,6 +22,7 @@ sudo service nginx start
 ### Lua Installieren
 
 ```
+
 sudo apt install lua5.3
 
 ```
@@ -42,15 +34,16 @@ sudo apt install python3 python3-dev curl python-is-python3 -y
 sudo apt install python3-pip -y
 
 ```
+
 ### C und C++
 
 ```
+
 sudo apt install spawn-fcgi
 sudo apt-get install libfcgi-dev
 sudo apt-get install cmake gcc clang gdb build-essential
 
 ```
-
 ### Go
 
 ```
@@ -58,19 +51,18 @@ sudo mkdir /download
 cd /download
 sudo wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+
 ```
 
-### Rust 
+### Rust
 
 ```
 cd /download
 sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+
 ```
-
 ### Dotnet Installieren
+
 * [Dotnet](https://docs.microsoft.com/de-de/dotnet/core/install/linux-ubuntu?source=recommendations)
-
-`
-
 

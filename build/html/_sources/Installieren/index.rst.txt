@@ -7,3 +7,5 @@ Installieren
 
 
     wsl.md
+    Ubuntu.md
+    Windows.md
