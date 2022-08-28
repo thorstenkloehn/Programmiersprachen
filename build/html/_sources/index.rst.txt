@@ -7,7 +7,7 @@ Programmiersprachen
 ===================
 
 .. toctree::
-   Installieren.md
+   Installieren/index.rst
    Datenschutzerklawrung.md
    Impressum.md
 
