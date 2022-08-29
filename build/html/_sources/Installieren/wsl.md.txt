@@ -68,9 +68,16 @@ sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ```
 
-### Dotnet Installieren
-* [Dotnet](https://docs.microsoft.com/de-de/dotnet/core/install/linux-ubuntu?source=recommendations)
+### Dotnet
 
-`
+* [Dotnet](https://docs.microsoft.com/de-de/dotnet/core/install/linux-ubuntu)
+
+### PHP
+
+```
+sudo apt-get install php  openssl php-imagick php-common php-curl php-gd php-imap php-intl php-json php-ldap php-mbstring php-ssh2 php-xml php-zip unzip -y
+sudo apt-get install php-fpm php-cli  composer  -y
+
+```
 
 
