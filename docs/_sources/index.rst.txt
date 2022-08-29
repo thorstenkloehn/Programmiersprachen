@@ -8,6 +8,7 @@ Programmiersprachen
 
 .. toctree::
    Installieren/index.rst
+   Einstellung/index.rst
    Datenschutzerklawrung.md
    Impressum.md
 
