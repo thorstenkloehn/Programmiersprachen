@@ -1,4 +1,4 @@
-# Wsl Einstellung (C und C++)
+# Ubuntu Einstellung (C und C++)
 
 ## C (Fastcgi und Nginx)
 ### C Beispiel Code
