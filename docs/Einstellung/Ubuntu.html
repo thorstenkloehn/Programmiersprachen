@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ubuntu Einstellung (C und C++) &#8212; Programmiersprachen 1 Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Entwicklungsumgebung" href="../Entwicklungsumgebung/index.html" />
+    <link rel="prev" title="Wsl Einstellung (C und C++)" href="wsl.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ubuntu-einstellung-c-und-c">
+<h1>Ubuntu Einstellung (C und C++)<a class="headerlink" href="#ubuntu-einstellung-c-und-c" title="Permalink to this heading">¶</a></h1>
+<section id="c-fastcgi-und-nginx">
+<h2>C (Fastcgi und Nginx)<a class="headerlink" href="#c-fastcgi-und-nginx" title="Permalink to this heading">¶</a></h2>
+<section id="c-beispiel-code">
+<h3>C Beispiel Code<a class="headerlink" href="#c-beispiel-code" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;fcgi_stdio.h&gt;</span>
+<span class="c1">#include &lt;stdlib.h&gt;</span>
+
+<span class="nb">int</span> <span class="n">main</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">FCGI_Accept</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Status: 200 OK</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Content-type: text/html</span><span class="se">\r\n\r\n</span><span class="s2">&quot;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;&lt;!doctype&gt;&lt;html&gt;&lt;body&gt;</span><span class="si">%s</span><span class="s2">&lt;/body&gt;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;SERVER_NAME&quot;</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</section>
+<section id="gcc-compiler">
+<h3>GCC Compiler<a class="headerlink" href="#gcc-compiler" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span> <span class="n">main</span><span class="o">.</span><span class="n">c</span> <span class="o">-</span><span class="n">o</span> <span class="n">Testseite</span> <span class="o">-</span><span class="n">lfcgi</span>
+
+
+
+</pre></div>
+</div>
+</section>
+<section id="programm-starten">
+<h3>Programm Starten<a class="headerlink" href="#programm-starten" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">spawn</span><span class="o">-</span><span class="n">fcgi</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8087</span> <span class="n">Testseite</span>
+
+</pre></div>
+</div>
+</section>
+<section id="nginx-einstellung">
+<h3>Nginx Einstellung<a class="headerlink" href="#nginx-einstellung" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sudo service nginx start
+sudo nano /etc/nginx/sites-available/default
+
+
+
+server {
+    listen 80;
+    server_name localhost;
+
+    location / {
+      fastcgi_pass   127.0.0.1:8087;
+
+      fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;
+      fastcgi_param  SERVER_SOFTWARE    nginx;
+      fastcgi_param  QUERY_STRING       $query_string;
+      fastcgi_param  REQUEST_METHOD     $request_method;
+      fastcgi_param  CONTENT_TYPE       $content_type;
+      fastcgi_param  CONTENT_LENGTH     $content_length;
+      fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+      fastcgi_param  SCRIPT_NAME        $fastcgi_script_name;
+      fastcgi_param  REQUEST_URI        $request_uri;
+      fastcgi_param  DOCUMENT_URI       $document_uri;
+      fastcgi_param  DOCUMENT_ROOT      $document_root;
+      fastcgi_param  SERVER_PROTOCOL    $server_protocol;
+      fastcgi_param  REMOTE_ADDR        $remote_addr;
+      fastcgi_param  REMOTE_PORT        $remote_port;
+      fastcgi_param  SERVER_ADDR        $server_addr;
+      fastcgi_param  SERVER_PORT        $server_port;
+      fastcgi_param  SERVER_NAME        $server_name;
+    }
+  }
+</pre></div>
+</div>
+</section>
+<section id="clion-einstellung">
+<h3>Clion Einstellung<a class="headerlink" href="#clion-einstellung" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake_minimum_required</span><span class="p">(</span><span class="n">VERSION</span> <span class="mf">3.16</span><span class="p">)</span>
+<span class="n">project</span><span class="p">(</span><span class="n">untitled</span> <span class="n">C</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="n">CMAKE_C_STANDARD</span> <span class="mi">99</span><span class="p">)</span>
+
+<span class="n">add_executable</span><span class="p">(</span><span class="n">untitled</span> <span class="n">main</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
+<span class="n">target_link_libraries</span><span class="p">(</span><span class="n">untitled</span> <span class="n">fcgi</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="c">
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this heading">¶</a></h2>
+<section id="id1">
+<h3>C++ Beispiel Code<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;iostream&gt;</span>
+<span class="c1">#include &quot;fcgio.h&quot;</span>
+
+<span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">Backup</span> <span class="n">the</span> <span class="n">stdio</span> <span class="n">streambufs</span>
+    <span class="n">streambuf</span> <span class="o">*</span> <span class="n">cin_streambuf</span>  <span class="o">=</span> <span class="n">cin</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">();</span>
+    <span class="n">streambuf</span> <span class="o">*</span> <span class="n">cout_streambuf</span> <span class="o">=</span> <span class="n">cout</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">();</span>
+    <span class="n">streambuf</span> <span class="o">*</span> <span class="n">cerr_streambuf</span> <span class="o">=</span> <span class="n">cerr</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">();</span>
+
+    <span class="n">FCGX_Request</span> <span class="n">request</span><span class="p">;</span>
+
+    <span class="n">FCGX_Init</span><span class="p">();</span>
+    <span class="n">FCGX_InitRequest</span><span class="p">(</span><span class="o">&amp;</span><span class="n">request</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">FCGX_Accept_r</span><span class="p">(</span><span class="o">&amp;</span><span class="n">request</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fcgi_streambuf</span> <span class="n">cin_fcgi_streambuf</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>
+        <span class="n">fcgi_streambuf</span> <span class="n">cout_fcgi_streambuf</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">out</span><span class="p">);</span>
+        <span class="n">fcgi_streambuf</span> <span class="n">cerr_fcgi_streambuf</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">err</span><span class="p">);</span>
+
+        <span class="n">cin</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cin_fcgi_streambuf</span><span class="p">);</span>
+        <span class="n">cout</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cout_fcgi_streambuf</span><span class="p">);</span>
+        <span class="n">cerr</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cerr_fcgi_streambuf</span><span class="p">);</span>
+
+        <span class="n">cout</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;Status: 200 OK</span><span class="se">\r\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;Content-type: text/html</span><span class="se">\r\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;  &lt;head&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;    &lt;title&gt;Hello, World!&lt;/title&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;  &lt;/head&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;  &lt;body&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="n">FCGX_GetParam</span><span class="p">(</span><span class="s2">&quot;REQUEST_URI&quot;</span><span class="p">,</span><span class="n">request</span><span class="o">.</span><span class="n">envp</span><span class="p">)</span> 
+             <span class="o">&lt;&lt;</span> <span class="n">endl</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;    &lt;h1&gt;Hello, World!&lt;/h1&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;  &lt;/body&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+             <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+
+        <span class="o">//</span> <span class="n">Note</span><span class="p">:</span> <span class="n">the</span> <span class="n">fcgi_streambuf</span> <span class="n">destructor</span> <span class="n">will</span> <span class="n">auto</span> <span class="n">flush</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="n">restore</span> <span class="n">stdio</span> <span class="n">streambufs</span>
+    <span class="n">cin</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">cin_streambuf</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">cout_streambuf</span><span class="p">);</span>
+    <span class="n">cerr</span><span class="o">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">cerr_streambuf</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3>C++<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">++</span> <span class="n">main</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">lfcgi</span><span class="o">++</span> <span class="o">-</span><span class="n">lfcgi</span> <span class="o">-</span><span class="n">o</span> <span class="n">Testseite</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Programmiersprachen</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installieren/index.html">Installieren</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Einstellung</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="wsl.html">Wsl Einstellung (C und C++)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ubuntu Einstellung (C und C++)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c-fastcgi-und-nginx">C (Fastcgi und Nginx)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c-beispiel-code">C Beispiel Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gcc-compiler">GCC Compiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programm-starten">Programm Starten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nginx-einstellung">Nginx Einstellung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clion-einstellung">Clion Einstellung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#c">C++</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">C++ Beispiel Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">C++</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Entwicklungsumgebung/index.html">Entwicklungsumgebung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Datenschutzerklawrung.html">Datenschutzerklärung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Impressum.html">Impressum</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Einstellung</a><ul>
+      <li>Previous: <a href="wsl.html" title="vorheriges Kapitel">Wsl Einstellung (C und C++)</a></li>
+      <li>Next: <a href="../Entwicklungsumgebung/index.html" title="nächstes Kapitel">Entwicklungsumgebung</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Thorsten Klöhn.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/Einstellung/Ubuntu.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
