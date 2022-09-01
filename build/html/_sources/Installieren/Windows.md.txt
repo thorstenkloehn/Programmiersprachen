@@ -34,6 +34,3 @@ setx TMP e:\AppData\Local\Temp
 * [Go](https://go.dev/dl/)
 * [Node](https://nodejs.org/de/download/)
 * [Lua](http://luabinaries.sourceforge.net/download.html)
-* [PHP](https://windows.php.net/download)
-* [Composer](https://getcomposer.org/download/)
-* [Dotnet](https://dotnet.microsoft.com/en-us/download)

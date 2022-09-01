@@ -10,6 +10,7 @@ Programmiersprachen
    Installieren/index.rst
    Einstellung/index.rst
    Entwicklungsumgebung/index.rst
+   Build/index.rst
    Datenschutzerklawrung.md
    Impressum.md
 
