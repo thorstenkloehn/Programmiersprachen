@@ -11,6 +11,7 @@ Programmiersprachen
    Einstellung/index.rst
    Entwicklungsumgebung/index.rst
    Build/index.rst
+   Datenbank/index.rst
    Datenschutzerklawrung.md
    Impressum.md
 
