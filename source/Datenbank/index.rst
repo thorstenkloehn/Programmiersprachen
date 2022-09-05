@@ -5,5 +5,3 @@ Datenbank
     PostgreSQL.md
     ElasticSearch.md
     MongoDB.md
-    Redis.md
-    ApacheCassandra.md

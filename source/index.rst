@@ -12,6 +12,7 @@ Programmiersprachen
    Entwicklungsumgebung/index.rst
    Build/index.rst
    Datenbank/index.rst
+   Literatur/index.rst
    Datenschutzerklawrung.md
    Impressum.md
 
