@@ -7,6 +7,7 @@ Programmiersprachen
 ===================
 
 .. toctree::
+   Dokumente/index.rst
    Installieren/index.rst
    Einstellung/index.rst
    Entwicklungsumgebung/index.rst

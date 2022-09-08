@@ -4,7 +4,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Datenbank &#8212; Programmiersprachen 1 Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -36,7 +35,7 @@
           <div class="body" role="main">
             
   <section id="datenbank">
-<h1>Datenbank<a class="headerlink" href="#datenbank" title="Permalink to this heading">¶</a></h1>
+<h1>Datenbank<a class="headerlink" href="#datenbank" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="PostgreSQL.html">PostgreSQL</a><ul>
@@ -59,8 +58,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="MongoDB.html">MongoDB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Mysql.html">Mysql</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Redis.html">Redis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Redis.html">Redis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Redis.html#wsl-installieren">Wsl Installieren</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -83,6 +84,7 @@
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Dokumente/index.html">Dokumente</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installieren/index.html">Installieren</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Einstellung/index.html">Einstellung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Entwicklungsumgebung/index.html">Entwicklungsumgebung</a></li>
@@ -91,7 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="PostgreSQL.html">PostgreSQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ElasticSearch.html">ElasticSearch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MongoDB.html">MongoDB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Mysql.html">Mysql</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Redis.html">Redis</a></li>
 </ul>
 </li>
@@ -118,7 +119,7 @@
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -135,7 +136,7 @@
       &copy;2022, Thorsten Klöhn.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

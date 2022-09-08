@@ -4,7 +4,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Wsl Installieren &#8212; Programmiersprachen 1 Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -35,8 +34,8 @@
 
           <div class="body" role="main">
             
-  <section id="wsl-installieren">
-<h1>Wsl Installieren<a class="headerlink" href="#wsl-installieren" title="Permalink to this heading">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="wsl-installieren">
+<h1>Wsl Installieren<a class="headerlink" href="#wsl-installieren" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span>
 <span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
 <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">DistroName</span><span class="o">&gt;</span>
@@ -44,7 +43,7 @@
 </pre></div>
 </div>
 <section id="ubuntu-installieren">
-<h2>Ubuntu Installieren<a class="headerlink" href="#ubuntu-installieren" title="Permalink to this heading">¶</a></h2>
+<h2>Ubuntu Installieren<a class="headerlink" href="#ubuntu-installieren" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">core</span>
@@ -54,7 +53,7 @@
 </div>
 </section>
 <section id="nginx-installieren">
-<h2>Nginx Installieren<a class="headerlink" href="#nginx-installieren" title="Permalink to this heading">¶</a></h2>
+<h2>Nginx Installieren<a class="headerlink" href="#nginx-installieren" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">nginx</span>
 <span class="n">sudo</span> <span class="n">service</span> <span class="n">nginx</span> <span class="n">start</span>
@@ -63,16 +62,16 @@
 </div>
 </section>
 <section id="programmiersprachen">
-<h2>Programmiersprachen<a class="headerlink" href="#programmiersprachen" title="Permalink to this heading">¶</a></h2>
+<h2>Programmiersprachen<a class="headerlink" href="#programmiersprachen" title="Link zu dieser Überschrift">¶</a></h2>
 <section id="lua-installieren">
-<h3>Lua Installieren<a class="headerlink" href="#lua-installieren" title="Permalink to this heading">¶</a></h3>
+<h3>Lua Installieren<a class="headerlink" href="#lua-installieren" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">lua5</span><span class="mf">.3</span>
 
 </pre></div>
 </div>
 </section>
 <section id="python">
-<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h3>
+<h3>Python<a class="headerlink" href="#python" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">curl</span> <span class="n">python</span><span class="o">-</span><span class="ow">is</span><span class="o">-</span><span class="n">python3</span> <span class="o">-</span><span class="n">y</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="o">-</span><span class="n">y</span>
 
@@ -80,7 +79,7 @@
 </div>
 </section>
 <section id="c-und-c">
-<h3>C und C++<a class="headerlink" href="#c-und-c" title="Permalink to this heading">¶</a></h3>
+<h3>C und C++<a class="headerlink" href="#c-und-c" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">spawn</span><span class="o">-</span><span class="n">fcgi</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libfcgi</span><span class="o">-</span><span class="n">dev</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">gcc</span> <span class="n">clang</span> <span class="n">gdb</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span>
@@ -89,7 +88,7 @@
 </div>
 </section>
 <section id="go">
-<h3>Go<a class="headerlink" href="#go" title="Permalink to this heading">¶</a></h3>
+<h3>Go<a class="headerlink" href="#go" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">download</span>
 <span class="n">cd</span> <span class="o">/</span><span class="n">download</span>
 <span class="n">sudo</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">go</span><span class="o">.</span><span class="n">dev</span><span class="o">/</span><span class="n">dl</span><span class="o">/</span><span class="n">go1</span><span class="mf">.19</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
@@ -98,7 +97,7 @@
 </div>
 </section>
 <section id="rust">
-<h3>Rust<a class="headerlink" href="#rust" title="Permalink to this heading">¶</a></h3>
+<h3>Rust<a class="headerlink" href="#rust" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">download</span>
 <span class="n">sudo</span> <span class="n">curl</span> <span class="o">--</span><span class="n">proto</span> <span class="s1">&#39;=https&#39;</span> <span class="o">--</span><span class="n">tlsv1</span><span class="mf">.2</span> <span class="o">-</span><span class="n">sSf</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">sh</span><span class="o">.</span><span class="n">rustup</span><span class="o">.</span><span class="n">rs</span> <span class="o">|</span> <span class="n">sh</span>
 
@@ -126,6 +125,7 @@
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Dokumente/index.html">Dokumente</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Installieren</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Wsl Installieren</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ubuntu-installieren">Ubuntu Installieren</a></li>
@@ -173,7 +173,7 @@
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -190,7 +190,7 @@
       &copy;2022, Thorsten Klöhn.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

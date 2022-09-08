@@ -4,7 +4,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Wsl Einstellung (C und C++) &#8212; Programmiersprachen 1 Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -35,12 +34,12 @@
 
           <div class="body" role="main">
             
-  <section id="wsl-einstellung-c-und-c">
-<h1>Wsl Einstellung (C und C++)<a class="headerlink" href="#wsl-einstellung-c-und-c" title="Permalink to this heading">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="wsl-einstellung-c-und-c">
+<h1>Wsl Einstellung (C und C++)<a class="headerlink" href="#wsl-einstellung-c-und-c" title="Link zu dieser Überschrift">¶</a></h1>
 <section id="c-fastcgi-und-nginx">
-<h2>C (Fastcgi und Nginx)<a class="headerlink" href="#c-fastcgi-und-nginx" title="Permalink to this heading">¶</a></h2>
+<h2>C (Fastcgi und Nginx)<a class="headerlink" href="#c-fastcgi-und-nginx" title="Link zu dieser Überschrift">¶</a></h2>
 <section id="c-beispiel-code">
-<h3>C Beispiel Code<a class="headerlink" href="#c-beispiel-code" title="Permalink to this heading">¶</a></h3>
+<h3>C Beispiel Code<a class="headerlink" href="#c-beispiel-code" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;fcgi_stdio.h&gt;</span>
 <span class="c1">#include &lt;stdlib.h&gt;</span>
 
@@ -57,7 +56,7 @@
 </div>
 </section>
 <section id="gcc-compiler">
-<h3>GCC Compiler<a class="headerlink" href="#gcc-compiler" title="Permalink to this heading">¶</a></h3>
+<h3>GCC Compiler<a class="headerlink" href="#gcc-compiler" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span> <span class="n">main</span><span class="o">.</span><span class="n">c</span> <span class="o">-</span><span class="n">o</span> <span class="n">Testseite</span> <span class="o">-</span><span class="n">lfcgi</span>
 
 
@@ -66,7 +65,7 @@
 </div>
 </section>
 <section id="programm-starten">
-<h3>Programm Starten<a class="headerlink" href="#programm-starten" title="Permalink to this heading">¶</a></h3>
+<h3>Programm Starten<a class="headerlink" href="#programm-starten" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="n">spawn</span><span class="o">-</span><span class="n">fcgi</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8087</span> <span class="n">Testseite</span>
 
@@ -74,7 +73,7 @@
 </div>
 </section>
 <section id="nginx-einstellung">
-<h3>Nginx Einstellung<a class="headerlink" href="#nginx-einstellung" title="Permalink to this heading">¶</a></h3>
+<h3>Nginx Einstellung<a class="headerlink" href="#nginx-einstellung" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sudo service nginx start
 sudo nano /etc/nginx/sites-available/default
 
@@ -110,7 +109,7 @@ server {
 </div>
 </section>
 <section id="clion-einstellung">
-<h3>Clion Einstellung<a class="headerlink" href="#clion-einstellung" title="Permalink to this heading">¶</a></h3>
+<h3>Clion Einstellung<a class="headerlink" href="#clion-einstellung" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake_minimum_required</span><span class="p">(</span><span class="n">VERSION</span> <span class="mf">3.16</span><span class="p">)</span>
 <span class="n">project</span><span class="p">(</span><span class="n">untitled</span> <span class="n">C</span><span class="p">)</span>
 
@@ -123,9 +122,9 @@ server {
 </section>
 </section>
 <section id="c">
-<h2>C++<a class="headerlink" href="#c" title="Permalink to this heading">¶</a></h2>
+<h2>C++<a class="headerlink" href="#c" title="Link zu dieser Überschrift">¶</a></h2>
 <section id="id1">
-<h3>C++ Beispiel Code<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<h3>C++ Beispiel Code<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;iostream&gt;</span>
 <span class="c1">#include &quot;fcgio.h&quot;</span>
 
@@ -182,7 +181,7 @@ server {
 </div>
 </section>
 <section id="id2">
-<h3>C++<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h3>C++<a class="headerlink" href="#id2" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">++</span> <span class="n">main</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">lfcgi</span><span class="o">++</span> <span class="o">-</span><span class="n">lfcgi</span> <span class="o">-</span><span class="n">o</span> <span class="n">Testseite</span>
 </pre></div>
 </div>
@@ -208,6 +207,7 @@ server {
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Dokumente/index.html">Dokumente</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installieren/index.html">Installieren</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Einstellung</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Wsl Einstellung (C und C++)</a><ul>
@@ -257,7 +257,7 @@ server {
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -274,7 +274,7 @@ server {
       &copy;2022, Thorsten Klöhn.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
