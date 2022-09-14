@@ -4,7 +4,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Redis &#8212; Programmiersprachen 1 Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,11 +12,12 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Literatur" href="../Literatur/index.html" />
+    <link rel="next" title="Data Warehouse" href="../DataWarehouse/index.html" />
     <link rel="prev" title="MongoDB" href="MongoDB.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -34,10 +35,10 @@
 
           <div class="body" role="main">
             
-  <section class="tex2jax_ignore mathjax_ignore" id="redis">
-<h1>Redis<a class="headerlink" href="#redis" title="Link zu dieser Überschrift">¶</a></h1>
+  <section id="redis">
+<h1>Redis<a class="headerlink" href="#redis" title="Permalink to this heading">¶</a></h1>
 <section id="wsl-installieren">
-<h2>Wsl Installieren<a class="headerlink" href="#wsl-installieren" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Wsl Installieren<a class="headerlink" href="#wsl-installieren" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span>
 
@@ -69,6 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Einstellung/index.html">Einstellung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Entwicklungsumgebung/index.html">Entwicklungsumgebung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Build/index.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programmiersprachen/index.html">Programmiersprachem</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Datenbank</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="PostgreSQL.html">PostgreSQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ElasticSearch.html">ElasticSearch</a></li>
@@ -79,6 +81,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../DataWarehouse/index.html">Data Warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Objektspeicher/index.html">Objektspeicher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Literatur/index.html">Literatur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Datenschutzerklawrung.html">Datenschutzerklärung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Impressum.html">Impressum</a></li>
@@ -90,7 +94,7 @@
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">Datenbank</a><ul>
       <li>Previous: <a href="MongoDB.html" title="vorheriges Kapitel">MongoDB</a></li>
-      <li>Next: <a href="../Literatur/index.html" title="nächstes Kapitel">Literatur</a></li>
+      <li>Next: <a href="../DataWarehouse/index.html" title="nächstes Kapitel">Data Warehouse</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -104,7 +108,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -121,7 +125,7 @@
       &copy;2022, Thorsten Klöhn.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
