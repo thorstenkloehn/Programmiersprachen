@@ -4,7 +4,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>PostgreSQL &#8212; Programmiersprachen 1 Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -34,30 +35,30 @@
 
           <div class="body" role="main">
             
-  <section class="tex2jax_ignore mathjax_ignore" id="postgresql">
-<h1>PostgreSQL<a class="headerlink" href="#postgresql" title="Link zu dieser Überschrift">¶</a></h1>
+  <section id="postgresql">
+<h1>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this heading">¶</a></h1>
 <section id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">¶</a></h2>
 <section id="download">
-<h3>Download<a class="headerlink" href="#download" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Download<a class="headerlink" href="#download" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">Download</a></p></li>
 </ul>
 </section>
 </section>
 <section id="ubuntu-22-4">
-<h2>Ubuntu 22.4<a class="headerlink" href="#ubuntu-22-4" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Ubuntu 22.4<a class="headerlink" href="#ubuntu-22-4" title="Permalink to this heading">¶</a></h2>
 <section id="cli">
-<h3>CLI<a class="headerlink" href="#cli" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>CLI<a class="headerlink" href="#cli" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span>  <span class="n">postgresql</span> <span class="n">postgresql</span><span class="o">-</span><span class="n">contrib</span> <span class="n">postgis</span> <span class="n">postgresql</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="n">postgis</span><span class="o">-</span><span class="mi">3</span> <span class="n">postgresql</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="n">postgis</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">scripts</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="ubuntu-20-4">
-<h2>Ubuntu 20.4<a class="headerlink" href="#ubuntu-20-4" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Ubuntu 20.4<a class="headerlink" href="#ubuntu-20-4" title="Permalink to this heading">¶</a></h2>
 <section id="id1">
-<h3>Cli<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Cli<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">postgresql</span> <span class="n">postgresql</span><span class="o">-</span><span class="n">contrib</span> <span class="n">postgis</span> <span class="n">postgresql</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="n">postgis</span><span class="o">-</span><span class="mi">3</span> <span class="n">postgresql</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="n">postgis</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">scripts</span>
 
@@ -90,6 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Einstellung/index.html">Einstellung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Entwicklungsumgebung/index.html">Entwicklungsumgebung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Build/index.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programmiersprachen/index.html">Programmiersprachem</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Datenbank</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">PostgreSQL</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
@@ -111,6 +113,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Redis.html">Redis</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../DataWarehouse/index.html">Data Warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Objektspeicher/index.html">Objektspeicher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Literatur/index.html">Literatur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Datenschutzerklawrung.html">Datenschutzerklärung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Impressum.html">Impressum</a></li>
@@ -136,7 +140,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -153,7 +157,7 @@
       &copy;2022, Thorsten Klöhn.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

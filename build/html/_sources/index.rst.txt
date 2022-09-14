@@ -12,7 +12,10 @@ Programmiersprachen
    Einstellung/index.rst
    Entwicklungsumgebung/index.rst
    Build/index.rst
+   Programmiersprachen/index.rst
    Datenbank/index.rst
+   DataWarehouse/index.rst
+   Objektspeicher/index.rst
    Literatur/index.rst
    Datenschutzerklawrung.md
    Impressum.md
