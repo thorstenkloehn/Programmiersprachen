@@ -1,0 +1,6 @@
+Python
+======
+
+.. toctree::
+
+    variable.md
