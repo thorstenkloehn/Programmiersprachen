@@ -17,7 +17,7 @@
     <script src="../../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
     <link rel="search" title="Suche" href="../../search.html" />
-    <link rel="next" title="Datenbank" href="../../Datenbank/index.html" />
+    <link rel="next" title="Java" href="../Java/index.html" />
     <link rel="prev" title="C++" href="index.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -39,8 +39,45 @@
 <h1>Variable<a class="headerlink" href="#variable" title="Permalink to this heading">¶</a></h1>
 <section id="datentypen">
 <h2>Datentypen<a class="headerlink" href="#datentypen" title="Permalink to this heading">¶</a></h2>
+<section id="wahrheitswerte">
+<h3>Wahrheitswerte<a class="headerlink" href="#wahrheitswerte" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+ <span class="c1">#include &lt;iostream&gt;</span>
+
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="nb">bool</span> <span class="n">wahrheit</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+<span class="nb">bool</span> <span class="n">wahrheit1</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">wahrheit</span><span class="p">;</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+</pre></div>
+</div>
+</section>
 <section id="buchstabe">
 <h3>Buchstabe<a class="headerlink" href="#buchstabe" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;iostream&gt;</span>
+
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="n">char</span> <span class="n">buchstaben</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span><span class="p">;</span>
+
+  <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">buchstaben</span><span class="p">;</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</section>
+<section id="leere-variable-erstellen">
+<h3>Leere Variable erstellen<a class="headerlink" href="#leere-variable-erstellen" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>void</p></li>
+</ul>
 </section>
 <section id="ganzezahlen">
 <h3>Ganzezahlen<a class="headerlink" href="#ganzezahlen" title="Permalink to this heading">¶</a></h3>
@@ -53,16 +90,26 @@
     <span class="n">int16_t</span> <span class="n">tho16</span><span class="p">;</span>
     <span class="n">int32_t</span> <span class="n">tho32</span><span class="p">;</span>
     <span class="n">int64_t</span> <span class="n">tho64</span><span class="p">;</span>
+    <span class="n">uint8_t</span> <span class="n">utho</span> <span class="o">=</span> <span class="mi">111</span><span class="p">;</span>
+    <span class="n">uint16_t</span> <span class="n">utho16</span><span class="p">;</span>
+    <span class="n">uint32_t</span> <span class="n">hhhh</span><span class="p">;</span>
+    <span class="n">uint64_t</span> <span class="n">ghjg</span><span class="p">;</span>
 
-<span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="nb">int</span><span class="p">(</span><span class="n">tho</span><span class="p">);</span>
-
+<span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="nb">int</span><span class="p">(</span><span class="n">tho</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="nb">int</span><span class="p">(</span><span class="n">utho</span><span class="p">);</span>
 <span class="p">}</span>
-
-
-
+<span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
+</section>
+<section id="kommazahlen">
+<h2>Kommazahlen<a class="headerlink" href="#kommazahlen" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>float (32 bit) -f</p></li>
+<li><p>double (64 bit)</p></li>
+</ul>
 </section>
 </section>
 
@@ -93,14 +140,18 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">C++</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Variable</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#datentypen">Datentypen</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#wahrheitswerte">Wahrheitswerte</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#buchstabe">Buchstabe</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#leere-variable-erstellen">Leere Variable erstellen</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#ganzezahlen">Ganzezahlen</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#kommazahlen">Kommazahlen</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../Java/index.html">Java</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Datenbank/index.html">Datenbank</a></li>
@@ -118,7 +169,7 @@
   <li><a href="../index.html">Programmiersprachem</a><ul>
   <li><a href="index.html">C++</a><ul>
       <li>Previous: <a href="index.html" title="vorheriges Kapitel">C++</a></li>
-      <li>Next: <a href="../../Datenbank/index.html" title="nächstes Kapitel">Datenbank</a></li>
+      <li>Next: <a href="../Java/index.html" title="nächstes Kapitel">Java</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
