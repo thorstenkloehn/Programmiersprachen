@@ -27,7 +27,7 @@ public class Main {
 }
 
 ```
-### Ganzezahlen
+## Ganzezahlen
 
 ```
 public class Main {
@@ -50,6 +50,6 @@ public class Main {
 * float (32 bit) -f
 * double (64 bit)
 
-### Leere Variable erstellen
+## Leere Variable erstellen
 
 * void
