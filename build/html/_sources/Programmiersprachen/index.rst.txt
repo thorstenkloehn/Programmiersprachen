@@ -8,4 +8,5 @@ Programmiersprachem
     C-Sharp/index.rst
     Rust/index.rst
     Go/index.rst
+    Python/index.rst
 
