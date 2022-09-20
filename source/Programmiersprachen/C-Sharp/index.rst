@@ -1,5 +1,0 @@
-C#
-==
-.. toctree::
-
-    variable.md
