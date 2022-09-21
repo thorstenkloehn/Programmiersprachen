@@ -10,4 +10,5 @@ Programmiersprachem
     Rust/index.rst
     Go/index.rst
     Python/index.rst
+    TypeScript/index.rst
 
