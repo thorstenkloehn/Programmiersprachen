@@ -14,8 +14,9 @@
 
 ## Vergleichsoperatoren
 
-| Operator | Beschreibung  |                                   |
-|----------|---------------|
+
+| Operator |  Beschreibung  |                                   
+| ---------- | ------------- |
 |==|gleich|
 |!=| ungleich|
 |>| größer als |
@@ -26,16 +27,17 @@
 ## Logische Operatoren
 
 * &&  = UND-Operator
-* || = Oder-Operator bezeichnet. Wenn einer der beiden Operanden nicht Null ist, wird die Bedingung wahr.|
+* || = Oder-Operator bezeichnet. 
 * !	=  NOT-Operator 
 
 
 ## Zuweisungsoperatoren
-| Operator | Beschreibung                                     |
-|--|---------------------|
-|=|Einfacher Zuweisungsoperator|
-|+=|AND-Zuweisungsoperator .|
-|-=|Subtrahieren Sie den UND-Zuweisungsoperator.|
-|*=|Multiplizieren Sie den UND-Zuweisungsoperator|
-|/=|Division UND Zuweisungsoperator|
-|%=|Modulus UND Zuweisungsoperator|
+
+| Operator | Beschreibung |
+|--------| --------------------- |
+| =      |Einfacher Zuweisungsoperator|
+| +=     |AND-Zuweisungsoperator .|
+| -=     |Subtrahieren Sie den UND-Zuweisungsoperator.|
+| *=     |Multiplizieren Sie den UND-Zuweisungsoperator|
+| /=     |Division UND Zuweisungsoperator|
+| %=     |Modulus UND Zuweisungsoperator|
