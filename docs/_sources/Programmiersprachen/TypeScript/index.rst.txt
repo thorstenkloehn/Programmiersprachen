@@ -2,3 +2,4 @@ TypeScript
 ==========
 
 .. toctree::
+    variable.md
