@@ -32,11 +32,11 @@ return 0;
 
 ```
 
-### Leere Variable erstellen
+## Leere Variable erstellen
 
 * void
 
-### Ganzezahlen
+## Ganzezahlen
 
 ```
 #include <iostream>

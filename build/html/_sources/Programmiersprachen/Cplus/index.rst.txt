@@ -3,4 +3,5 @@ C++
 
 .. toctree::
     Variable.md
-    Grundrechner.md
+    Typumwandlung.md
+    Operator.md
