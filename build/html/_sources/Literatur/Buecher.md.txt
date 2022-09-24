@@ -9,8 +9,6 @@
 * [MongoDB](https://www.thalia.de/shop/home/artikeldetails/A1033267296)
 
 ## Programmierspachen
-### C
-* [C von A bis Z Das umfassende Handbuch](https://www.rheinwerk-verlag.de/c-von-a-bis-z-das-umfassende-handbuch/)
 ### C++
 * [C++ Das umfassende Handbuch](https://www.rheinwerk-verlag.de/c-plusplus-das-umfassende-handbuch/)
 ### Rust
