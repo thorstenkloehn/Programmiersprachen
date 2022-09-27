@@ -5,6 +5,7 @@ Programmiersprachen
 
     Cplus/index.rst
     Java/index.rst
+    Csharp/index.rst
     Kotlin/index.rst
     Rust/index.rst
     Go/index.rst

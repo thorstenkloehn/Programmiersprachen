@@ -4,7 +4,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Sphinx Doc &#8212; Programmiersprachen 1 Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -37,10 +38,32 @@
             
   <section id="sphinx-doc">
 <h1>Sphinx Doc<a class="headerlink" href="#sphinx-doc" title="Permalink to this heading">¶</a></h1>
-<section id="install">
-<h2>Install<a class="headerlink" href="#install" title="Permalink to this heading">¶</a></h2>
+<section id="installieren">
+<h2>Installieren<a class="headerlink" href="#installieren" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">sphinx</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">myst_parser</span>
+
+</pre></div>
+</div>
+</section>
+<section id="neues-dokument-erstellen">
+<h2>Neues Dokument erstellen<a class="headerlink" href="#neues-dokument-erstellen" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+
+
+</pre></div>
+</div>
+</section>
+<section id="config-py">
+<h2>config.py<a class="headerlink" href="#config-py" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
 
 </pre></div>
 </div>
@@ -67,7 +90,9 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dokumente</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Sphinx Doc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#install">Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installieren">Installieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#neues-dokument-erstellen">Neues Dokument erstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-py">config.py</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Jupyter_Book.html">Jupyter Book</a></li>
@@ -124,7 +149,7 @@
       &copy;2022, Thorsten Klöhn.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.2.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
