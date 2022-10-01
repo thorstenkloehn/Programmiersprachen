@@ -11,4 +11,5 @@ Programmiersprachen
     Go/index.rst
     Python/index.rst
     TypeScript/index.rst
+    R/index.rst
 
