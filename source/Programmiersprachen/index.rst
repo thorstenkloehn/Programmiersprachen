@@ -12,4 +12,7 @@ Programmiersprachen
     Python/index.rst
     TypeScript/index.rst
     R/index.rst
+    Scala/index.rst
+    Javascript/index.rst
+
 
