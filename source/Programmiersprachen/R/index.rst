@@ -1,5 +1,0 @@
-R
-=
-.. toctree::
-
-    variable.md
