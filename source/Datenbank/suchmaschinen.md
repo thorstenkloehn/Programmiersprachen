@@ -1,0 +1,5 @@
+# Suchmaschinen
+
+* ElasticSearch
+* Solr
+* Sphinx
