@@ -6,3 +6,4 @@ Datenbank
     ElasticSearch.md
     MongoDB.md
     Redis.md
+    suchmaschinen.md
