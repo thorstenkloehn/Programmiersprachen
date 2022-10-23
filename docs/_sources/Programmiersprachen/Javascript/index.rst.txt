@@ -4,7 +4,3 @@ Javascript
 .. toctree::
 
     variable.md
-
-
-
-

@@ -1,5 +1,0 @@
-Python
-======
-
-.. toctree::
-    variable.md

@@ -1,5 +1,0 @@
-TypeScript
-==========
-
-.. toctree::
-    variable.md
