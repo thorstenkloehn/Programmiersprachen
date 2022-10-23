@@ -1,5 +1,0 @@
-Kotlin
-======
-
-.. toctree::
-    Variable.md
